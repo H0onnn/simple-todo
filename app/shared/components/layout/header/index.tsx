@@ -9,7 +9,7 @@ export function Header() {
       leftSlot={
         <div className="flex items-center gap-4">
           <Image src={IMAGES.LOGO} alt="logo" width={40} height={30} priority />
-          <span>Kanban</span>
+          <h1 className="text-2xl font-bold">Kanban</h1>
         </div>
       }
     />
