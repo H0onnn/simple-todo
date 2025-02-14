@@ -8,7 +8,7 @@ import { cn } from "@/app/shared/utils";
 interface BasicDialogProps extends OverlayProps {
   title: string;
   description?: string;
-  children: ReactNode;
+  children?: ReactNode;
   className?: string;
   leftButton?: {
     text?: string;
@@ -33,7 +33,7 @@ export const BasicDialog = ({
   rightButton,
   resolve,
 }: BasicDialogProps) => {
-  const handleClose = (e?: React.MouseEvent | React.TouchEvent) => {
+  const handleClose = (e?: MouseEvent | TouchEvent) => {
     e?.stopPropagation();
     resolve?.("Cancel");
   };
