@@ -18,18 +18,20 @@ export const PageLayout = ({
   const paddingTop = header !== null && isPaddingTop ? "pt-[62px]" : "pt-0";
 
   return (
-    <>
+    <div className="h-screen flex flex-col">
       {header}
 
       <div
         className={cn([
           paddingTop,
           paddingBottom,
-          "min-h-screen w-full mx-auto container px-4 sm:px-6 lg:px-8",
+          "flex-1 w-full mx-auto container px-4 sm:px-6 lg:px-8 overflow-auto",
         ])}
       >
-        <main className={cn("w-full", className)}>{children}</main>
+        <main className={cn("w-full h-full flex flex-col", className)}>
+          {children}
+        </main>
       </div>
-    </>
+    </div>
   );
 };
