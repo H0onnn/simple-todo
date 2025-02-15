@@ -17,6 +17,14 @@ export const KanbanBoards = () => {
     return <KanbanSkeleton />;
   }
 
+  if (columns.length === 0) {
+    return (
+      <div className="flex items-center justify-center h-full">
+        <span className="text-sm md:text-xl">No columns available</span>
+      </div>
+    );
+  }
+
   return (
     <DragDropContext onDragEnd={onDragEnd}>
       <div className="overflow-x-auto h-full">
