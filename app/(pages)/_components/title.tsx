@@ -1,3 +1,5 @@
+"use client";
+
 import { useKanbanStore } from "@/app/shared/store/kanban";
 
 import { AddButton, FormDialog } from "@/app/(pages)/_components";

@@ -3,3 +3,4 @@ export * from "./delete-dialog";
 export * from "./edit-dropdown-button";
 export * from "./form-dialog";
 export * from "./kanban";
+export * from "./title";
